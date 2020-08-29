@@ -168,42 +168,7 @@
 
     <!-- log in section End -->
 
-    <!-- About section -->
-    <!-- 
-    <div class="about-us footer" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(./images/v.jpg);" >
-        <div class="row ">
-            <div class="col-sm widget-footer">
-                <div class="widgets">
-                    <h4>Contact Info.</h4>
-                    <p>This is the contact information so that you can touch with us easyly.</p><br>
-                    <p><strong>Phone:</strong>7908686710</p>
-                    <p><strong>E-mail:</strong>tchatterjee466@gmail.com</p>
-                </div>
-            </div>
-            <div class="col-sm widget-footer">
-                <div class="widgets">
-                    <h4>Sign up</h4>
-                    <p>If you want to get latest updated programmes below </p><br>
-                    <p><strong>E-mail:</strong></p>
-                    <input type="text" class="subscribe_text">
-                    <br>
-                    <input type="submit" value="SUBSCRIBE" class="subscribe-btn">
-                </div>
-
-            </div>
-            <div class="col-sm widget-footer">
-                <div class="widgets">
-                    <h4>Follow on Social media</h4>
-                    <div class="facebook">
-                   <a href=""><img src="images/f.png" ></a>
-                   <a href=""><img src="images/t.png"  ></a>
-                   <a href=""><img src="images/w.png"  ></a>
-                   </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- About section End -->
+    
 
     <!-- Footer -->
     <footer class="page-footer font-small blue pt-4  ">
@@ -212,10 +177,10 @@
         <div class="container-fluid text-center text-md-left "
             style="background: linear-gradient(rgba(0,0,0,0.7),rgba(70, 68, 68, 0.7));">
 
-            <!-- Grid row -->
+          
             <div class="row">
 
-                <!-- Grid column -->
+               
                 <div class="col-md-6 mt-md-0 mt-3">
 
                     <!-- Content -->
@@ -280,14 +245,14 @@
                         </li>
                     </ul>
                 </div>
-                <!-- Grid column -->
+            
 
                 <hr class="clearfix w-100 d-md-none pb-3">
 
-                <!-- Grid column -->
+              
                 <div class="col-md-3 mb-md-0 mb-3">
 
-                    <!-- Links -->
+              
                     <h5 class="text underline" style="color: #fff;">About System</h5>
 
                     <ul class="list-unstyled" style="color: #fff;">
@@ -300,12 +265,10 @@
                     </ul>
 
                 </div>
-                <!-- Grid column -->
 
-                <!-- Grid column -->
                 <div class="col-md-3 mb-md-0 mb-3">
 
-                    <!-- Links -->
+                   
                     <h5 class="text underline" style="color: #fff;">Social Links</h5>
 
                     <ul class="list-unstyled">
@@ -324,13 +287,13 @@
                     </ul>
 
                 </div>
-                <!-- Grid column -->
+        
 
             </div>
-            <!-- Grid row -->
+       
 
         </div>
-        <!-- Footer Links -->
+    
 
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3 bg-black " style="color: #fff;">© 2020 Copyright:
@@ -339,7 +302,7 @@
         <!-- Copyright -->
 
     </footer>
-    <!-- Footer -->
+    <!-- Footer End -->
 
 
 
