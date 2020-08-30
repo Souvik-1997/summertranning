@@ -32,5 +32,6 @@ Route::get('/home', function () {
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/student-login', 'StudentController@login')->name('studentLogin');
-Route::post('/login-handle', 'StudentController@loginHandle')->name('login.handle');
+Route::get('/student-login', 'StudentController@login')->name('student.Login');
+// Route::post('/login-handle', 'StudentController@loginHandle')->name('login.handle');
+Route::post('/login', 'StudentController@save');

@@ -7,17 +7,16 @@
 <body style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(./images/b.jpg);">
 	<div class="login-box">
 		<img src="./images/i.png" class="icon">
-		<h1>Souvik's Solution</h1>
-		{{$errors}}
-		<form action="{{route("login.handle")}}" method="POST" {{--onsubmit="return validation()"--}}>
+		<h1>Student Login</h1>
+		<form action="{{route("login")}}" method="POST" {{--onsubmit="return validation()"--}}>
 			@csrf
 			<p>Student name :</p>
-			<input type="text" name="s_name" placeholder="enter username" id="user" autocomplete="off">
+			<input type="text" name="name" placeholder="enter username" id="user" autocomplete="off">
 			<span id="username" class="pop"></span>
 
-			<p>Student Id :</p>
+			{{-- <p>Student Id :</p>
 			<input type="text" name="s_id" placeholder="enter id" id="pass" autocomplete="off">
-			<span id="s_id" class="pop"></span><br>
+			<span id="s_id" class="pop"></span><br> --}}
 
 			<p>Student password :</p>
 			<input type="password" name="password" placeholder="enter pass" id="pass" autocomplete="off">
