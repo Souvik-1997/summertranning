@@ -32,4 +32,5 @@ Route::get('/home', function () {
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/studentLogin', 'studentLoginController@index')->name('studentLogin');
+Route::get('/student-login', 'StudentController@login')->name('studentLogin');
+Route::post('/login-handle', 'StudentController@loginHandle')->name('login.handle');
