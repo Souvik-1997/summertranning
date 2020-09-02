@@ -15,9 +15,9 @@ class StudentController extends Controller
     public function index()
     {
         //
-        $student = Student :: all();
+        $student = Student ::all();
         return view('student.studentAfter',['student' => $student]);
-        dd($student);
+        // dd($student);
     }
 
 
@@ -53,7 +53,7 @@ class StudentController extends Controller
             'password'=>$request->get('password')
         ]);
         $student ->save();
-        return redirect('/student')/*->with('sucess','New student is added')*/;
+        return redirect("/student/$student->id")->with('sucess','New student is added');
     }
 
 
@@ -66,6 +66,7 @@ class StudentController extends Controller
     public function show(Student $student)
     {
         //
+        dd($student);
     }
 
     /**

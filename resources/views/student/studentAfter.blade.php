@@ -6,13 +6,22 @@
             <div class="card">
                 <div class="card-header">After log in</div>
 
-                <div class="card-body">
-                    <h1>After log in page</h1>
-
-                <h5>{{$student}}</h5>
-
-
-                </div>
+                {{-- {{$student}} --}}
+                <table border = 1>
+                    <tr>
+                       <td>Name</td>
+                       <td>email</td>
+                       <td>Password</td>
+                    </tr>
+                    {{-- @foreach ($student as $studen) --}}
+                    <tr>
+                       <td>{{ $student['name']}}</td>
+                       <td>{{ $student['email']}}</td>
+                       <td>{{ $student['password'] }}</td>
+                    </tr>
+                    {{-- @endforeach --}}
+                 </table>
+                 
             </div>
         </div>
     </div>
