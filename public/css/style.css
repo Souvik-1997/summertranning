@@ -186,56 +186,6 @@ html,body {
     padding: 5px;
 }
 
- /* .wids p
-{
-	color: rgb(199, 199, 241);
-	font-size: small;
-	margin: 8px  0px;
-}
-
-.wids strong
-{
-	color: white;
-
-}
-
-
-
- .subscribe_text
-{
-	width: 100%;
-	border:1px solid rgba(0,0,0,0.23);
-	border-radius: 100px;
-	height: 25px;
-}
-
-.subscribe-btn
-{
-	border:1px solid  #d8ffe2;
-	background-image: linear-gradient(red,white);
-    color: black;
-    border-radius: 100px;
-    font-size: 13px;
-    padding: 3px 10px;
-    margin-top: 10px;
-	box-shadow: -10px 10px 25px black;
-}
-
-.subscribe-btn:hover
-{
-	cursor: pointer;
-	background-image: linear-gradient(black,white);
-}
-.facebook img
-{
-	 width: 20%;
-	height: auto;
-   padding: 2.5%;
-   float: left;
-.footer .wids .facebook img
-{
-	margin: 5px;
-} */
 
 .facebook img
 {
