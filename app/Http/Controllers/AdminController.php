@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Student;
-use Dotenv\Loader\Value;
+use App\Admin;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
 
-class StudentController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,11 +16,10 @@ class StudentController extends Controller
     public function index()
     {
         //
-        $student = Student::all();
-        return view('student.studentAfter', ['student' => $student]);
-        // dd($student);
+        $admin = Admin::all();
+        return view('admin.adminAfter', ['admin' => $admin]);
+        dd($admin);
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -31,7 +29,7 @@ class StudentController extends Controller
     public function create()
     {
         //
-        return view('student.studentLogin');
+        return view('admin.adminLogin');
     }
 
     /**
@@ -43,57 +41,45 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         //
-        // print_r($request->input());
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:50'],
+            'dept' => ['required', 'string', 'max:50'],
             'email' => ['required', 'string', 'email', 'max:255', /*'unique:users'*/],
             'password' => ['required', 'string', 'min:4'],
         ]);
-        $student = new Student([
+        $admin = new Admin([
             'name' => $request->get('name'),
+            'dept' => $request->get('dept'),
             'email' => $request->get('email'),
             'password' => $request->get('password')
         ]);
-        $student->save();
-        // Session::put('data',$request->name);
-        // $student->session()->put('name', 'name');
-     
+        $admin->save();
+
         // Via a request instance...
-        $request->session()->put('name',  $student->name);
-        $request->session()->put('email',  $student->email);
-
-        // return redirect()->route('student.studentLogin')->with('sucess','New student is added');
-        return redirect("student")->with('sucess', 'New student is added');
+        $request->session()->put('name',  $admin->name);
+        $request->session()->put('dept',  $admin->dept);
+        $request->session()->put('email',  $admin->email);
+        return redirect("admin")->with('sucess', 'New student is added');
     }
-
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Student  $student
+     * @param  \App\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function show(Student $student)
+    public function show(Admin $admin)
     {
         //
-
-        //  $student->session()->put('name', 'name');
-
-
-        return view("student.studentAfter");
-
-
-
-        // dd($student);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Student  $student
+     * @param  \App\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function edit(Student $student)
+    public function edit(Admin $admin)
     {
         //
     }
@@ -102,10 +88,10 @@ class StudentController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Student  $student
+     * @param  \App\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Student $student)
+    public function update(Request $request, Admin $admin)
     {
         //
     }
@@ -113,22 +99,11 @@ class StudentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Student  $student
+     * @param  \App\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Student $student)
+    public function destroy(Admin $admin)
     {
         //
     }
 }
-// {{-- Provide by sir --}}
-// <h1>{{Session::get('name')}}</h1>
-// <h1>{{Session::get('email')}}</h1>
-
-// @if ($errors->any())
-// <ul class="alert alert-success">
-//     @foreach ($errors->all() as $error)
-//         <div >{{$error}}</div>
-//     @endforeach
-// </ul> 
-// @endif

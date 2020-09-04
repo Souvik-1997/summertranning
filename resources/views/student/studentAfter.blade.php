@@ -21,6 +21,7 @@
     </script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     {{-- link end --}}
 
@@ -40,8 +41,8 @@
               <ul class="navbar-nav mr-auto">
               </ul>
               <form class="form-inline my-2 my-lg-0">
-                <i class="fas fa-user-circle"></i>
-                <h5 style="color: aliceblue ">{{Session::get('name')}}</h5> &nbsp;&nbsp;
+                <i class="fas fa-user-circle" style="font-size:35px;color:rgb(252, 252, 252);" ></i>&nbsp;
+                <h5 style="color: aliceblue;font-size:18px;padding-top:10px;">{{Session::get('name')}}</h5> &nbsp;&nbsp;
               </form>
             </div>
           </nav>
@@ -51,16 +52,16 @@
         <div class="row justify-content-center">
             <h1 style="color: rgb(245, 131, 66)">Student Conformation</h1>
         </div>
-        <hr>
+        <hr >
 
         <div class="row">
-            <h3 style="color: rgb(18, 79, 194)">Student Name : <a style="font-size: 20px">{{ Session::get('name') }}</a></h3>
+            <a style="color: rgb(18, 79, 194)"><i class="fas fa-user"></i> Student Name : &nbsp;<a >{{ Session::get('name') }}</a></a>
         </div>
         <div class="row">
-            <h3 style="color: rgb(18, 79, 194)">Student Email :<a style="font-size: 20px">{{ Session::get('email') }}</a></h3>
+            <a style="color: rgb(18, 79, 194)"><i class="fas fa-envelope"></i> Student Email :&nbsp; <a >{{ Session::get('email') }}</a></a>
         </div>
 
-        <hr>
+        <hr >
 
         <form>
             <div class="form-group">

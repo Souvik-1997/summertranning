@@ -23,11 +23,13 @@ Route::get('/online', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/online', 'HomeController@online');
+// Route::get('/online', 'HomeController@online');
 // Route::get('/student-login', 'StudentController@index')->name('student.login');
 // Route::post('/after-login', 'StudentController@store')->name('after.login');
 // Route::post('/student-after', 'StudentController@afterlogin')->name('student.after');
 
 Route::resource('student','StudentController');
 Route::post('student.studentAfter','StudentController@show');
+
+Route::resource('admin','AdminController');
 

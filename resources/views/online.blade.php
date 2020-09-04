@@ -21,7 +21,7 @@
 
 </head>
 
-<body style="background-image: url(./images/bg1.jpg) ;">
+<body style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(./images/bg10.jpg) ;">
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-inner">
             <nav class="navbar ">
@@ -155,7 +155,7 @@
                         <h5 style="color: grey;">Wishing you better experience </h5>
                         <h5 style="color: grey;">to taking exam</h5>
                         <div class="sub">
-                            <input type="submit" name="submit" value="Log in">
+                            <a href="{{action('AdminController@create')}}"  target="self "> <input type="submit" name="submit" value="Log in" ></a>
                         </div>
                     </div>
                 </div>
