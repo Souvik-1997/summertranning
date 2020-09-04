@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Student;
+use Dotenv\Loader\Value;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class StudentController extends Controller
 {
@@ -15,8 +17,8 @@ class StudentController extends Controller
     public function index()
     {
         //
-        $student = Student ::all();
-        return view('student.studentAfter',['student' => $student]);
+        $student = Student::all();
+        return view('student.studentAfter', ['student' => $student]);
         // dd($student);
     }
 
@@ -48,12 +50,20 @@ class StudentController extends Controller
             'password' => ['required', 'string', 'min:4'],
         ]);
         $student = new Student([
-            'name'=>$request->get('name'),
-            'email'=>$request->get('email'),
-            'password'=>$request->get('password')
+            'name' => $request->get('name'),
+            'email' => $request->get('email'),
+            'password' => $request->get('password')
         ]);
-        $student ->save();
-        return redirect("/student/$student->id")->with('sucess','New student is added');
+        $student->save();
+        // Session::put('data',$request->name);
+        // $student->session()->put('name', 'name');
+     
+        // Via a request instance...
+        $request->session()->put('name',  $student->name);
+        $request->session()->put('email',  $student->email);
+
+        // return redirect()->route('student.studentLogin')->with('sucess','New student is added');
+        return redirect("student")->with('sucess', 'New student is added');
     }
 
 
@@ -66,7 +76,15 @@ class StudentController extends Controller
     public function show(Student $student)
     {
         //
-        dd($student);
+
+        //  $student->session()->put('name', 'name');
+
+
+        return view("student.studentAfter");
+
+
+
+        // dd($student);
     }
 
     /**
@@ -103,3 +121,14 @@ class StudentController extends Controller
         //
     }
 }
+// {{-- Provide by sir --}}
+// <h1>{{Session::get('name')}}</h1>
+// <h1>{{Session::get('email')}}</h1>
+
+// @if ($errors->any())
+// <ul class="alert alert-success">
+//     @foreach ($errors->all() as $error)
+//         <div >{{$error}}</div>
+//     @endforeach
+// </ul> 
+// @endif

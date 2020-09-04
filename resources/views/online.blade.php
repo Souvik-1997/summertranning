@@ -136,7 +136,7 @@
                         <h5 style="color: grey;">Wishing you have a good exam... </h5>
                         <h5 style="color: grey;">Best of luck</h5>
                         <div class="sub">
-                        <a href="{{route('student.login')}}"  target="self "> <input type="submit" name="submit" value="Log in" ></a>
+                        <a href="{{action('StudentController@create')}}"  target="self "> <input type="submit" name="submit" value="Log in" ></a>
                         </div>
                     </div>
                 </div>
