@@ -45,7 +45,7 @@ class AdminController extends Controller
             'name' => ['required', 'string', 'max:50'],
             'dept' => ['required', 'string', 'max:50'],
             'email' => ['required', 'string', 'email', 'max:255', /*'unique:users'*/],
-            'password' => ['required', 'string', 'min:4'],
+            'password' => ['required', 'string', 'min:4']
         ]);
         $admin = new Admin([
             'name' => $request->get('name'),

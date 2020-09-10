@@ -32,4 +32,5 @@ Route::resource('student','StudentController');
 Route::post('student.studentAfter','StudentController@show');
 
 Route::resource('admin','AdminController');
+Route::resource('exam','ExamController');
 
