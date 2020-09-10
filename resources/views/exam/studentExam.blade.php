@@ -95,7 +95,7 @@
                     <p>
                         <a href="{{ route('exam.edit', $set->id) }}" class="btn btn-primary">Edit</a>&nbsp;&nbsp;
 
-                    <form action="{{ route('exam.destroy', $set->qname)}}" method="post">
+                    <form action="{{ route('exam.destroy', $set->id)}}" method="post">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Delete</button>
