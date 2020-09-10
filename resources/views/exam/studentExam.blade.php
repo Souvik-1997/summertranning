@@ -41,7 +41,7 @@
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-primary bg-primary">
             <a class="navbar-brand" href="#" style="color: aliceblue ;">
-                <h2>Exam panel</h2>
+                <h2>Question chaeckong panel</h2>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
