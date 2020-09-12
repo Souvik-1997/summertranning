@@ -18,7 +18,7 @@ class AdminController extends Controller
         //
         $admin = Admin::all();
         return view('admin.adminAfter', ['admin' => $admin]);
-        dd($admin);
+        // dd($admin);
     }
 
     /**

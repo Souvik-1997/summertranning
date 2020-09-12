@@ -103,9 +103,6 @@
                   <input type="text" class="form-control" id="ans" name="ans" placeholder="enter the right answer" value="{{$exam->ans}}">
                 </div>
               </div>
-
-
-          
             <button type="submit" class="btn btn-primary float-right">Add question</button>
         </form>
         <br>

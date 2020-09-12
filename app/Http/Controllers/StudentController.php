@@ -120,6 +120,18 @@ class StudentController extends Controller
     {
         //
     }
+
+    // public function attempt()
+    // {
+    //     //
+    //     $student = Student::all();
+    //     return view('student.examAttempt', ['student' => $student]);
+    //     // dd($student);
+    // }
+
+
+
+
 }
 // {{-- Provide by sir --}}
 // <h1>{{Session::get('name')}}</h1>
