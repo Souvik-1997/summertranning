@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Exam;
-use App\Attempt;
 use App\Student;
 use App\Admin;
+use App\Attempts;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 
 class AttemptsExamController extends Controller
@@ -15,11 +16,13 @@ class AttemptsExamController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
         //
-        // $attempt = Attempt::all();
-    // return view('attempt.result' /*['attempt' => $attempt]*/);
+    // $result_info = Attempts::where('id',$id)->get()->first();
+    // print_r($result_info);
+    // return view('attempt.result');
+
 
    
     }
@@ -34,6 +37,7 @@ class AttemptsExamController extends Controller
         //
         $exam = Exam::all();
         return view('attempt.attemptsExam', ['exam' => $exam]);
+
         
 
     }
@@ -64,8 +68,9 @@ class AttemptsExamController extends Controller
         //     'op4' => $request->get('op4')
         // ]);
         // $attempt->save();
-    //    echo "<pre>";
-    //    print_r($request->all());
+
+        $yes_ans=0;
+        $no_ans=0;
         $data = $request->all();
         $result = array();
     for ($i=1; $i <=$request->index ; $i++) 
@@ -76,15 +81,24 @@ class AttemptsExamController extends Controller
             if($exam->ans == $data['ans'.$i] )
             {
                 $result[$data['qname'.$i]]='YES';
+                $yes_ans++;
             }
             else
             {
                 $result[$data['qname'.$i]]='NO'; 
+                $no_ans++;
             }
         }
     }
-    echo "<pre>";
-    print_r($result);
+    // echo "<pre>";
+    // print_r($result);
+    $res = new Attempts();
+    $res->name=Session::get('name');
+    $res->yes_ans=$yes_ans;
+    $res->no_ans=$no_ans;
+    $res->result=json_encode($result);
+    $res->save();
+    return redirect(url('attempt/show_result/'.$res->id));
     }
 
     /**
@@ -130,6 +144,12 @@ class AttemptsExamController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function show_result($id)
+    {
+            $data['result_info'] = Attempts::where('id',$id)->get()->first();
+            return view('attempt.result',$data);
+           
     }
 
 }

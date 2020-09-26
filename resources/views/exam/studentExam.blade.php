@@ -39,7 +39,7 @@
 
 <body >
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-primary bg-primary">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#" style="color: aliceblue ;">
                 <h2>Question chaecking panel</h2>
             </a>

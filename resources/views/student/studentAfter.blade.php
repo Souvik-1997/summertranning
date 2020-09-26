@@ -19,8 +19,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     {{-- link end --}}
@@ -31,37 +30,43 @@
 
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-primary bg-primary">
-            <a class="navbar-brand" href="#" style="color: aliceblue ;"><h3>Student is logged</h3> </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#" style="color: aliceblue ;">
+                <h3>Student is logged</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-          
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <i class="fas fa-user-circle" style="font-size:35px;color:rgb(252, 252, 252);" ></i>&nbsp;
-                <h5 style="color: aliceblue;font-size:18px;padding-top:10px;">{{Session::get('name')}}</h5> &nbsp;&nbsp;
-              </form>
+                <ul class="navbar-nav mr-auto">
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <i class="fas fa-user-circle" style="font-size:35px;color:rgb(252, 252, 252);"></i>&nbsp;
+                    <h5 style="color: aliceblue;font-size:18px;padding-top:10px;">{{ Session::get('name') }}</h5>
+                    &nbsp;&nbsp;
+                </form>
             </div>
-          </nav>
+        </nav>
     </header>
-<br><br><br>
+    <br><br><br>
     <div class="container ">
         <div class="row justify-content-center">
             <h1 style="color: rgb(245, 131, 66)">Student Conformation</h1>
         </div>
-        <hr >
+        <hr>
 
         <div class="row">
-            <a style="color: rgb(18, 79, 194)"><i class="fas fa-user"></i> Student Name : &nbsp;<a >{{ Session::get('name') }}</a></a>
+            <a style="color: rgb(18, 79, 194)"><i class="fas fa-user"></i> Student Name :
+                &nbsp;<a>{{ Session::get('name') }}</a></a>
         </div>
         <div class="row">
-            <a style="color: rgb(18, 79, 194)"><i class="fas fa-envelope"></i> Student Email :&nbsp; <a >{{ Session::get('email') }}</a></a>
+            <a style="color: rgb(18, 79, 194)"><i class="fas fa-envelope"></i> Student Email :&nbsp;
+                <a>{{ Session::get('email') }}</a></a>
         </div>
 
-        <hr >
+        <hr>
 
         <form>
             <div class="form-group">
@@ -189,9 +194,11 @@
             </div>
             <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-                <label class="form-check-label" for="exampleCheck1" style="color: rgb(255, 0, 0)">I accept all the terms and condition </label>
+                <label class="form-check-label" for="exampleCheck1" style="color: rgb(255, 0, 0)">I accept all the terms
+                    and condition </label>
             </div>
-        <a href="{{action('AttemptsExamController@create')}}" type="submit" class="btn btn-primary float-right">Let's Start</a>
+            <a href="{{ route('attempt.create') }}" type="submit"
+                class="btn btn-primary float-right">Let's Start</a>
         </form>
         <br>
         <br>

@@ -40,7 +40,7 @@
 
 <body style=" background-image: linear-gradient(rgb(255, 255, 255rgb(255, 255, 255)4));">
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-primary bg-primary">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#" style="color: aliceblue ;">
                 <h2>Exam panel</h2>
             </a>

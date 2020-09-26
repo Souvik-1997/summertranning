@@ -39,7 +39,7 @@
 
 <body >
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-primary bg-primary">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#" style="color: aliceblue ;"><h2>Admin is logged</h2> </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -60,7 +60,7 @@
         <div class="row justify-content-center"> 
             <h1 style="color: rgb(245, 131, 66)">Examination Setup</h1>
         </div>
-        <hr >
+        <hr style="border: 1px solid" >
 
         <div class="row">
             <a style="color: rgb(18, 79, 194)"><i class="fas fa-user"></i> Admin Name : &nbsp;<a >{{ Session::get('name') }}</a></a>
@@ -113,10 +113,10 @@
                   <input type="text" class="form-control" id="stime" name="stime" placeholder="enter starting time" required>
                 </div>
               </div>
-            <div class="form-group form-check">
+            {{-- <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
                 <label class="form-check-label" for="exampleCheck1" style="color: rgb(255, 0, 0)">Agree and Continue </label>
-            </div>
+            </div> --}}
           <a href="{{action('ExamController@create')}}" type="submit" class="btn btn-primary float-right">Proceed</a>
         </form>
         <br>

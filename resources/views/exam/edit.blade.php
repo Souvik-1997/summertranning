@@ -39,7 +39,7 @@
 
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-primary bg-primary">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#" style="color: aliceblue ;"><h2>Editing Question</h2> </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -60,7 +60,7 @@
         <div class="row justify-content-center"> 
             <h1 style="color: rgb(245, 131, 66)">Editing Question </h1>
         </div>
-        <hr >
+        <hr style="border: 1px solid" >
 
  
 
@@ -68,7 +68,7 @@
             @method('PATCH')
             @csrf
               <div class="form-group row">
-                <label for="pname" class="col-sm-10 col-form-label">Question Name:</label>
+                <label for="pname" class="col-sm-10 col-form-label" style="font-weight: bold;">Question Name:</label>
                 <div class="col-sm-12">
                 <input type="text" class="form-control" id="qname" name="qname" placeholder="enter question" value="{{$exam->qname}}">
                 </div>

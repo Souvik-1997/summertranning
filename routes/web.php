@@ -35,4 +35,4 @@ Route::resource('admin','AdminController');
 Route::resource('exam','ExamController');
 Route::resource('attempt','AttemptsExamController');
 // Route::get('/attempt', 'ExamAttemptController@attempt');
-
+Route::get('attempt/show_result/{id}', 'AttemptsExamController@show_result');
