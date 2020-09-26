@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Exam;
+use App\Attempt;
+use App\Student;
+use App\Admin;
 use Illuminate\Http\Request;
 
 class AttemptsExamController extends Controller
@@ -15,9 +18,8 @@ class AttemptsExamController extends Controller
     public function index()
     {
         //
-        // $student = Student::all();
-        // return view('student.studentAfter', ['student' => $student]);
-        return view('attempt.result');
+        // $attempt = Attempt::all();
+    return view('attempt.result' /*['attempt' => $attempt]*/);
    
     }
 
@@ -31,6 +33,8 @@ class AttemptsExamController extends Controller
         //
         $exam = Exam::all();
         return view('attempt.attemptsExam', ['exam' => $exam]);
+        
+
     }
 
     /**
@@ -41,10 +45,24 @@ class AttemptsExamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // //
+        // $request->validate([
+        //     'qname' => ['required', 'string'],
+        //     'op1' => ['required', 'string'],
+        //     'op2' => ['required', 'string' /*'unique:users'*/],
+        //     'op3' => ['required', 'string'],
+        //     'op4' => ['required', 'string']
+        // ]);
 
+        // $attempt = new Attempt([
+        //     'qname' => $request->get('qname'),
+        //     'op1' => $request->get('op1'),
+        //     'op2' => $request->get('op2'),
+        //     'op3' => $request->get('op3'),
+        //     'op4' => $request->get('op4')
+        // ]);
+        // $attempt->save();
         return redirect("attempt");
-
     }
 
     /**

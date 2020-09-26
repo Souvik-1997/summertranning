@@ -37,11 +37,11 @@
 
 </head>
 
-<body>
+<body >
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-primary bg-primary">
             <a class="navbar-brand" href="#" style="color: aliceblue ;">
-                <h2>Question chaeckong panel</h2>
+                <h2>Question chaecking panel</h2>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +60,7 @@
         </nav>
     </header>
     <br><br><br>
-    <div class="container ">
+    <div class="container  ">
         <div class="row justify-content-center">
             <h1 style="color: rgb(245, 131, 66)">Question Checking</h1>
         </div>
@@ -74,7 +74,7 @@
         @php
         $i = 1;
         @endphp
-        <div class="card-body">
+        <div class="card-body shadow p-10 mb-5 bg-white rounded ">
             @foreach ($exam as $set)
                 <div class="row">
                     <div class="col-sm-12">

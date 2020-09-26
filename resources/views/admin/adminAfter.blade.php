@@ -37,7 +37,7 @@
 
 </head>
 
-<body>
+<body >
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-primary bg-primary">
             <a class="navbar-brand" href="#" style="color: aliceblue ;"><h2>Admin is logged</h2> </a>
@@ -73,48 +73,51 @@
         </div>
 
         <hr >
+        @if ($errors->any())
+        <ul class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+                <li><div >{{$error}}</div></li>
+            @endforeach
+       </ul> 
+        @endif
 
-        <form>
+        <form method="POST" +>
             @csrf
               <div class="form-group row">
                 <label for="pname" class="col-sm-2 col-form-label">Paper Name:</label>
                 <div class="col-sm-5">
-                  <input type="text" class="form-control" id="pname" name="pname" placeholder="enter paper name">
+                  <input type="text" class="form-control" id="pname" name="pname" placeholder="enter paper name" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label for="pcode" class="col-sm-2 col-form-label">Paper code:</label>
                 <div class="col-sm-5">
-                  <input type="text" class="form-control" id="pcode" name="pcode" placeholder="enter paper code">
+                  <input type="text" class="form-control" id="pcode" name="pcode" placeholder="enter paper code" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label for="tqn" class="col-sm-2 col-form-label">Total Question</label>
                 <div class="col-sm-5">
-                  <input type="text" class="form-control" id="tqn" name="tqn" placeholder="enter paper question">
+                  <input type="text" class="form-control" id="tqn" name="tqn" placeholder="enter paper question" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label for="ttime" class="col-sm-2 col-form-label">Total time:</label>
                 <div class="col-sm-5">
-                  <input type="text" class="form-control" id="ttime" name="ttime" placeholder="enter total time">
+                  <input type="text" class="form-control" id="ttime" name="ttime" placeholder="enter total time" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label for="stime" class="col-sm-2 col-form-label">Date and Starting time:</label>
                 <div class="col-sm-5">
-                  <input type="text" class="form-control" id="stime" name="stime" placeholder="enter starting time">
+                  <input type="text" class="form-control" id="stime" name="stime" placeholder="enter starting time" required>
                 </div>
               </div>
-
-
-          
-
             <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
                 <label class="form-check-label" for="exampleCheck1" style="color: rgb(255, 0, 0)">Agree and Continue </label>
             </div>
-            <button type="submit" class="btn btn-primary float-right">Proceed</button>
+          <a href="{{action('ExamController@create')}}" type="submit" class="btn btn-primary float-right">Proceed</a>
         </form>
         <br>
         <br>

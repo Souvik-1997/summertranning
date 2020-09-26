@@ -40,7 +40,7 @@
 <body>
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-primary bg-primary">
-            <a class="navbar-brand" href="#" style="color: aliceblue ;"><h2>You are in Question setup</h2> </a>
+            <a class="navbar-brand" href="#" style="color: aliceblue ;"><h2>Editing Question</h2> </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -58,13 +58,13 @@
 <br><br><br>
     <div class="container ">
         <div class="row justify-content-center"> 
-            <h1 style="color: rgb(245, 131, 66)">Question setup</h1>
+            <h1 style="color: rgb(245, 131, 66)">Editing Question </h1>
         </div>
         <hr >
 
  
 
-      <form method="POST" action="{{route('exam.update',$exam->id)}}">
+      <form method="POST" action="{{route('exam.update',$exam->id)}}" >
             @method('PATCH')
             @csrf
               <div class="form-group row">

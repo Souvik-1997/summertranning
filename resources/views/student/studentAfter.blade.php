@@ -191,7 +191,7 @@
                 <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
                 <label class="form-check-label" for="exampleCheck1" style="color: rgb(255, 0, 0)">I accept all the terms and condition </label>
             </div>
-        <a  type="submit" class="btn btn-primary float-right">Let's Start</a>
+        <a href="{{action('AttemptsExamController@create')}}" type="submit" class="btn btn-primary float-right">Let's Start</a>
         </form>
         <br>
         <br>

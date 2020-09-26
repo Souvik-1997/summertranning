@@ -38,7 +38,7 @@
 
 </head>
 
-<body>
+<body style=" background-image: linear-gradient(rgb(255, 255, 255rgb(255, 255, 255)4));">
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-primary bg-primary">
             <a class="navbar-brand" href="#" style="color: aliceblue ;">
@@ -63,26 +63,22 @@
     <br><br><br>
     <div class="container ">
         <div class="row justify-content-center">
-            <h1 style="color: rgb(245, 131, 66)">Exam</h1>
+            <h1 style="color: rgb(255, 255, 255)">Exam</h1>
         </div>
-        <hr>
-        <div class="card">
-            <div class="card">
+
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+            <div class="card shadow-sm p-1 mb-2 bg-white rounded">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-4">
                             <h3>Time : 30 minutes</h3>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="text-center">
-                                <h3>Timer : <span class="js-timeout">30:00</span></h3>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
+                        <div class="col">
                             <div class="text-right">
-                                <h3>Status pending</h3>
+                                <h3 class="fas fa-user-clock" style="padding-top: 5px;">  <span class="js-timeout">30:00</span></h3>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -114,21 +110,22 @@
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label">
-                                            <input type="radio" class="form-check-input" id="op1"
+                                            <input type="radio" class="form-check-input" id="op2"
                                                 name="answer{{ $key+1}}">{{ $set->op2 }}
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label">
-                                            <input type="radio" class="form-check-input" id="op1"
+                                            <input type="radio" class="form-check-input" id="op3"
                                                 name="answer{{ $key+1}}">{{ $set->op3 }}
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label">
-                                            <input type="radio" class="form-check-input" id="op1"
+                                            <input type="radio" class="form-check-input" id="op4"
                                                 name="answer{{ $key+1}}">{{ $set->op4 }}
                                         </label>
+                                    {{-- <h5>{{$set}}</h5> --}}
                                     </div>
                                 </ul>
 
@@ -138,6 +135,7 @@
                     <button type="submit" class="btn btn-danger float-right" >Submit</button>
 
                 </div>
+                <br>
             </form>
         </div>
     </div>

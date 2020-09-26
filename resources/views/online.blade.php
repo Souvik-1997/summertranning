@@ -121,11 +121,11 @@
                     aria-controls="profile" aria-selected="false">Admin Log in</a>
             </li>
         </ul>
-        <div class="tab-content bg-pink" id="myTabContent">
+        <div class="tab-content shadow p-3 mb-2 bg-white rounded" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
                 <div class="row">
-                    <div class="col-auto ">
+                    <div class="col-auto shadow p-3 mb-2 bg-white rounded ">
                         <img src="./images/sl.jpg" width="350px" height="350px">
                     </div>
                     <div class="col ">
@@ -144,7 +144,7 @@
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                 <div class="row">
-                    <div class="col-auto">
+                    <div class="col-auto shadow p-3 mb-2 bg-white rounded">
                         <img src="./images/al.jpg" width="350px" height="350px">
                     </div>
                     <div class="col ">

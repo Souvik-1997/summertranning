@@ -34,10 +34,15 @@
         });
 
     </script>
-
+    <style>
+        .bg-color
+        {
+            background-image: linear-gradient(rgb(255, 255, 255),rgb(253, 253, 253));
+        }
+    </style>
 </head>
 
-<body>
+<body >
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-primary bg-primary">
             <a class="navbar-brand" href="#" style="color: aliceblue ;">
@@ -65,28 +70,25 @@
             <h1 style="color: rgb(245, 131, 66)">Result</h1>
         </div>
         <hr>
-        <div class="card">
+        <div class="card bg-color shadow p-3 mb-5 bg-white rounded">
             <div class="card-body ">
                 <div class="row">
-                    <a style="color: rgb(6, 35, 88);font-size:20px"> Student Name : &nbsp;<a>{{ Session::get('name') }}</a></a>
+                    <a style="color: rgb(6, 35, 88);font-size:20px"> Student Name : &nbsp;<a style="padding-top: 4px">{{ Session::get('name') }}</a></a>
                 </div>
                 <div class="row">
-                    <a style="color:  rgb(6, 35, 88);font-size:20px"> Department : &nbsp;<a>{{ Session::get('dept') }}</a></a>
-                </div>
-                <div class="row">
-                    <a style="color:  rgb(6, 35, 88);font-size:20px"> Email :&nbsp;<a>{{ Session::get('email') }}</a></a>
+                    <a style="color:  rgb(6, 35, 88);font-size:20px"> Email :&nbsp;<a style="padding-top: 4px">{{ Session::get('email') }}</a></a>
                 </div>
                 <div class="row">
                     <a style="color:  rgb(6, 35, 88);font-size:20px">No. of attempt question :&nbsp;<a></a></a>
                 </div>
                 <div class="row">
-                    <a style="color:  rgb(6, 35, 88);font-size:20px"> Total marks :&nbsp;<a></a></a>
+                    <a style="color:  rgb(6, 35, 88);font-size:20px"> Total obtained marks :&nbsp;<a></a></a>
                 </div>
             </div>
         </div>
     </div>
 
-    </div>
+    
 
 
     <br>

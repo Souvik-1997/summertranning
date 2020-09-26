@@ -19,20 +19,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     {{-- link end --}}
-<link rel="stylesheet" href="{{asset('css/jquery.datetimepicker.css')}}">
-<script src="{{asset('js/jquery.js')}}"></script>
-<script src="{{asset('js/jquery.datetimepicker.full.min.js')}}"></script>
+    <link rel="stylesheet" href="{{ asset('css/jquery.datetimepicker.css') }}">
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/jquery.datetimepicker.full.min.js') }}"></script>
 
 
-<script>  
-    $(function(){
-        $("#stime").datetimepicker();
-    });
+    <script>
+        $(function() {
+            $("#stime").datetimepicker();
+        });
+
     </script>
 
 </head>
@@ -40,88 +40,92 @@
 <body>
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-primary bg-primary">
-            <a class="navbar-brand" href="#" style="color: aliceblue ;"><h2>You are in Question setup</h2> </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+            <a class="navbar-brand" href="#" style="color: aliceblue ;">
+                <h2>You are in Question setup</h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-          
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <i class="fas fa-user-circle" style="font-size:35px;color:rgb(252, 252, 252);" ></i>&nbsp;
-                <h4 style="color: aliceblue;font-size:18px;padding-top:10px;">  {{Session::get('name')}}</h5> &nbsp;&nbsp;
-              </form>
+                <ul class="navbar-nav mr-auto">
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <i class="fas fa-user-circle" style="font-size:35px;color:rgb(252, 252, 252);"></i>&nbsp;
+                    <h4 style="color: aliceblue;font-size:18px;padding-top:10px;"> {{ Session::get('name') }}</h5>
+                        &nbsp;&nbsp;
+                </form>
             </div>
-          </nav>
+        </nav>
     </header>
-<br><br><br>
-    <div class="container ">
-        <div class="row justify-content-center"> 
+    <br><br><br>
+    <div class="container  ">
+        <div class="row justify-content-center ">
             <h1 style="color: rgb(245, 131, 66)">Question setup</h1>
         </div>
-        <hr >
+        <hr>
 
         @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-        <p>{{$message}}</p>
-        </div>
-            
+            <div class="alert alert-success">
+                <p>{{ $message }}</p>
+            </div>
+
         @endif
-
-
-      <form method="POST" action="{{route('exam.store')}}" onsubmit="onalert()">
+        <form method="POST" action="{{ route('exam.store') }}" onsubmit="onalert()" >
             @csrf
-              <div class="form-group row">
+            <div class="form-group row">
                 <label for="pname" class="col-sm-10 col-form-label">Question Name:</label>
                 <div class="col-sm-12">
-                  <input type="text" class="form-control" id="qname" name="qname" placeholder="enter question">
+                    <input type="text" class="form-control" id="qname" name="qname" placeholder="enter question">
                 </div>
-              </div>
-              <div class="form-group row">
+            </div>
+            <div class="form-group row">
                 <label for="pcode" class="col-sm-2 col-form-label">Option1:</label>
                 <div class="col-sm-5">
-                  <input type="text" class="form-control" id="op1" name="op1" placeholder="Option1">
+                    <input type="text" class="form-control" id="op1" name="op1" placeholder="Option1">
                 </div>
-              </div>
-              <div class="form-group row">
+            </div>
+            <div class="form-group row">
                 <label for="tqn" class="col-sm-2 col-form-label">Option2:</label>
                 <div class="col-sm-5">
-                  <input type="text" class="form-control" id="op2" name="op2" placeholder="Option2">
+                    <input type="text" class="form-control" id="op2" name="op2" placeholder="Option2">
                 </div>
-              </div>
-              <div class="form-group row">
+            </div>
+            <div class="form-group row">
                 <label for="ttime" class="col-sm-2 col-form-label">Option3:</label>
                 <div class="col-sm-5">
-                  <input type="text" class="form-control" id="op3" name="op3" placeholder="Option3">
+                    <input type="text" class="form-control" id="op3" name="op3" placeholder="Option3">
                 </div>
-              </div>
-              <div class="form-group row">
+            </div>
+            <div class="form-group row">
                 <label for="stime" class="col-sm-2 col-form-label">Option4:</label>
                 <div class="col-sm-5">
-                  <input type="text" class="form-control" id="op4" name="op4" placeholder="Option4">
+                    <input type="text" class="form-control" id="op4" name="op4" placeholder="Option4">
                 </div>
-              </div>
-              <div class="form-group row">
+            </div>
+            <div class="form-group row">
                 <label for="stime" class="col-sm-2 col-form-label">Answer:</label>
                 <div class="col-sm-5">
-                  <input type="text" class="form-control" id="ans" name="ans" placeholder="enter the right answer">
+                    <input type="text" class="form-control" id="ans" name="ans" placeholder="enter the right answer">
                 </div>
-              </div>
+            </div>
 
-      <button type="submit" class="btn btn-primary float-right" onclick="">Add question</button>
+            <button type="submit" class="btn btn-primary float-right" onclick="">Add question</button>
         </form>
+
         <br>
         <br>
-        <a href="{{action('ExamController@index')}}" class="btn btn-success float-right">Check all</a>
+        <a href="{{ action('ExamController@index') }}" class="btn btn-warning float-right">Check all</a>
+
+
     </div>
     <script>
-      function onalert()
-      {
-        alert("Question is added successfully");
-      } 
-    </script>
+        function onalert() {
+            alert("Question is added successfully");
+        }
 
+    </script>
 </body>
 
 </html>

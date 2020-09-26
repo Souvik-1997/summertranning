@@ -28,6 +28,7 @@ class ExamController extends Controller
     public function create()
     {
         //
+        
         return view('exam.adminExam');
     }
 
@@ -102,6 +103,11 @@ class ExamController extends Controller
             'ans' => ['required', 'string']
         ]);
         $exam->qname = $request->get('qname');
+        $exam->op1 = $request->get('op1');
+        $exam->op2 = $request->get('op2');
+        $exam->op3 = $request->get('op3');
+        $exam->op4 = $request->get('op4');
+        $exam->ans = $request->get('ans');
         $exam->update();
         return redirect('/exam')->with('success',"The question #$exam->id is updated" );
     }
