@@ -100,38 +100,49 @@
                                 <p>
                                 <h5>{{ $key+1}}.{{ $set->qname }}</h5>
                                 </p>
-                                <input type="hidden" name="qname" value="{{ $set->qname }}">
+                                <input type="hidden" name="qname{{ $key+1}}" value="{{ $set->id }}">
                                 <ul class="question-options">
+                                    {{-- option 1 --}}
                                     <div class="form-check">
                                         <label class="form-check-label">
                                             <input type="radio" class="form-check-input" id="op1"
-                                                name="answer{{ $key+1}}">{{ $set->op1 }}
+                                                name="ans{{ $key+1}}" value="{{ $set->op1 }}">{{ $set->op1 }}
                                         </label>
                                     </div>
+                                    {{-- option 2 --}}
                                     <div class="form-check">
                                         <label class="form-check-label">
                                             <input type="radio" class="form-check-input" id="op2"
-                                                name="answer{{ $key+1}}">{{ $set->op2 }}
+                                                name="ans{{ $key+1}}" value="{{ $set->op2 }}">{{ $set->op2 }}
                                         </label>
                                     </div>
+                                    {{-- option 3 --}}
                                     <div class="form-check">
-                                        <label class="form-check-label">
+                                        <label class="form-check-label" >
                                             <input type="radio" class="form-check-input" id="op3"
-                                                name="answer{{ $key+1}}">{{ $set->op3 }}
+                                                name="ans{{ $key+1}}" value="{{ $set->op3 }}">{{ $set->op3 }}
                                         </label>
                                     </div>
+                                    {{-- option 4 --}}
                                     <div class="form-check">
                                         <label class="form-check-label">
                                             <input type="radio" class="form-check-input" id="op4"
-                                                name="answer{{ $key+1}}">{{ $set->op4 }}
+                                                name="ans{{ $key+1}}" value="{{ $set->op4 }}">{{ $set->op4 }}
                                         </label>
                                     {{-- <h5>{{$set}}</h5> --}}
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label"  style="visibility: hidden";>
+                                            <input value= "0" checked="checked" type="radio" class="form-check-input" id="op3"
+                                                name="ans{{ $key+1}}">{{ $set->op4 }}
+                                        </label>
                                     </div>
                                 </ul>
 
                             </div>
                         </div>
                     @endforeach
+                    <input type="hidden" name="index" value="<?php echo $key+1 ?>">
                     <button type="submit" class="btn btn-danger float-right" >Submit</button>
 
                 </div>

@@ -19,7 +19,8 @@ class AttemptsExamController extends Controller
     {
         //
         // $attempt = Attempt::all();
-    return view('attempt.result' /*['attempt' => $attempt]*/);
+    // return view('attempt.result' /*['attempt' => $attempt]*/);
+
    
     }
 
@@ -45,6 +46,7 @@ class AttemptsExamController extends Controller
      */
     public function store(Request $request)
     {
+        
         // //
         // $request->validate([
         //     'qname' => ['required', 'string'],
@@ -62,7 +64,27 @@ class AttemptsExamController extends Controller
         //     'op4' => $request->get('op4')
         // ]);
         // $attempt->save();
-        return redirect("attempt");
+    //    echo "<pre>";
+    //    print_r($request->all());
+        $data = $request->all();
+        $result = array();
+    for ($i=1; $i <=$request->index ; $i++) 
+    { 
+        if (isset($data['qname'.$i])) 
+        {
+            $exam=Exam::where('id',$data['qname'.$i])->get()->first();
+            if($exam->ans == $data['ans'.$i] )
+            {
+                $result[$data['qname'.$i]]='YES';
+            }
+            else
+            {
+                $result[$data['qname'.$i]]='NO'; 
+            }
+        }
+    }
+    echo "<pre>";
+    print_r($result);
     }
 
     /**
