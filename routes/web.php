@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('/online', function () {
     return view('online');
 });
@@ -23,7 +24,7 @@ Route::get('/online', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-// Route::get('/online', 'HomeController@online');
+// Route::get('/online', 'HomeController@online')->name('online');
 // Route::get('/student-login', 'StudentController@index')->name('student.login');
 // Route::post('/after-login', 'StudentController@store')->name('after.login');
 // Route::post('/student-after', 'StudentController@afterlogin')->name('student.after');
@@ -36,3 +37,7 @@ Route::resource('exam','ExamController');
 Route::resource('attempt','AttemptsExamController');
 // Route::get('/attempt', 'ExamAttemptController@attempt');
 Route::get('attempt/show_result/{id}', 'AttemptsExamController@show_result');
+Route::get('/about', 'SiteDetailsController@about');
+Route::get('/online', 'SiteDetailsController@online');
+Route::get('/contact', 'SiteDetailsController@contact');
+

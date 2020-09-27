@@ -36,11 +36,11 @@
 
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item  nulli active" id="na">
+                    <li class="nav-item nulli activee" id="na">
                         <a class="nullia" id="na" style="color: antiquewhite;"> Home </a>
                     </li>
                     <li class="nav-item nulli ">
-                        <a class="nullia" style="color: antiquewhite;"> About </a>
+                    <a href="{{action('SiteDetailsController@about')}}" class="nullia" style="color: antiquewhite;"> About </a>
                     </li>
                     <li class="nav-item nulli ">
                         <a class="nullia" style="color: antiquewhite;"> Contact us </a>
@@ -163,24 +163,17 @@
         </div>
     </div>
 
-    <br>
-    <br>
-
+<br>
     <!-- log in section End -->
 
     
 
     <!-- Footer -->
     <footer class="page-footer font-small blue pt-4  ">
-
         <!-- Footer Links -->
         <div class="container-fluid text-center text-md-left "
-            style="background: linear-gradient(rgba(0,0,0,0.7),rgba(70, 68, 68, 0.7));">
-
-          
-            <div class="row">
-
-               
+            style="background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0,0,0,0.8));">
+            <div class="row" style="height: 210px;">
                 <div class="col-md-6 mt-md-0 mt-3">
 
                     <!-- Content -->
@@ -245,11 +238,7 @@
                         </li>
                     </ul>
                 </div>
-            
-
                 <hr class="clearfix w-100 d-md-none pb-3">
-
-              
                 <div class="col-md-3 mb-md-0 mb-3">
 
               
@@ -267,8 +256,6 @@
                 </div>
 
                 <div class="col-md-3 mb-md-0 mb-3">
-
-                   
                     <h5 class="text underline" style="color: #fff;">Social Links</h5>
 
                     <ul class="list-unstyled">
@@ -293,12 +280,13 @@
        
 
         </div>
-    
 
+        <br>
+        
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3 bg-black " style="color: #fff;">© 2020 Copyright:
-            <a href="https://mdbootstrap.com/" style="color: #fff;">Online Exam System</a>
+        <div class="footer-copyright text-center py-4 bg-black " style="color: #fff;">All Rights Reserved. &copy; 2020 <a href="" style="color: #fff;">Online Exam System</a>
         </div>
+    
         <!-- Copyright -->
 
     </footer>

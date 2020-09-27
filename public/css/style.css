@@ -23,7 +23,6 @@ html,body {
     text-decoration: none;
     padding: 5px 20px;
     border: 4px;
-
     border-radius: 4px;
     border: 1px solid rgb(255, 255, 255);
 }
@@ -34,9 +33,17 @@ html,body {
     background-color: #964050;
     border-top: 10px;
     transition: 0.3s ease;
-    box-shadow: -10px 10px 15px black;
+    box-shadow: -10px 10px 15px rgb(0, 0, 0);
     border-radius: 4px;
     text-emphasis-color: black;
+}
+.activee
+{
+    background-color: #964050;
+    border-radius: 4px;
+    padding: 5px 1px ;
+    margin-top: 5px;
+    
 }
 
 .bg-pink {

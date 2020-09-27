@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>After Login</title>
+    <title>Question</title>
     {{-- link --}}
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -77,37 +77,37 @@
             <div class="form-group row">
                 <label for="pname" class="col-sm-10 col-form-label" style="font-weight: bold" >Question Name:</label>
                 <div class="col-sm-12">
-                    <input type="text" class="form-control" id="qname" name="qname" placeholder="enter question">
+                    <input type="text" class="form-control" id="qname" name="qname" placeholder="enter question" required>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="pcode" class="col-sm-2 col-form-label">Option1:</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" id="op1" name="op1" placeholder="Option1">
+                    <input type="text" class="form-control" id="op1" name="op1" placeholder="Option1" required>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="tqn" class="col-sm-2 col-form-label">Option2:</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" id="op2" name="op2" placeholder="Option2">
+                    <input type="text" class="form-control" id="op2" name="op2" placeholder="Option2" required>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="ttime" class="col-sm-2 col-form-label">Option3:</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" id="op3" name="op3" placeholder="Option3">
+                    <input type="text" class="form-control" id="op3" name="op3" placeholder="Option3" required>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="stime" class="col-sm-2 col-form-label">Option4:</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" id="op4" name="op4" placeholder="Option4">
+                    <input type="text" class="form-control" id="op4" name="op4" placeholder="Option4" required>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="stime" class="col-sm-2 col-form-label">Answer:</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" id="ans" name="ans" placeholder="enter the right answer">
+                    <input type="text" class="form-control" id="ans" name="ans" placeholder="enter the right answer" required>
                 </div>
             </div>
 

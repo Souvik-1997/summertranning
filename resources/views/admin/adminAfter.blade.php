@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>After Login</title>
+    <title>paper set</title>
     {{-- link --}}
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -33,7 +33,7 @@
     $(function(){
         $("#stime").datetimepicker();
     });
-    </script>
+</script>
 
 </head>
 
@@ -81,7 +81,7 @@
        </ul> 
         @endif
 
-        <form method="POST" +>
+        <form action="{{action('ExamController@create')}}">
             @csrf
               <div class="form-group row">
                 <label for="pname" class="col-sm-2 col-form-label">Paper Name:</label>
@@ -113,11 +113,12 @@
                   <input type="text" class="form-control" id="stime" name="stime" placeholder="enter starting time" required>
                 </div>
               </div>
-            {{-- <div class="form-group form-check">
+            <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
                 <label class="form-check-label" for="exampleCheck1" style="color: rgb(255, 0, 0)">Agree and Continue </label>
-            </div> --}}
-          <a href="{{action('ExamController@create')}}" type="submit" class="btn btn-primary float-right">Proceed</a>
+            </div>
+          {{-- <a href="{{action('ExamController@create')}}" type="submit" class="btn btn-primary float-right">Proceed</a> --}}
+          <button class="btn btn-primary float-right" type="submit">Proceed</button>
         </form>
         <br>
         <br>

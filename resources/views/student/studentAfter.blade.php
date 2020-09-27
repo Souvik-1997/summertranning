@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>student agree</title>
     {{-- link --}}
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -68,7 +67,7 @@
 
         <hr>
 
-        <form>
+        <form action="{{ route('attempt.create') }}">
             <div class="form-group">
                 <p>
                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check-circle" fill="currentColor"
@@ -192,13 +191,14 @@
                     <a>Violating the Microsoft non-disclosure agreement (NDA) in any way</a>
                 </p>
             </div>
-            <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input required" id="exampleCheck1" required >
                 <label class="form-check-label" for="exampleCheck1" style="color: rgb(255, 0, 0)">I accept all the terms
                     and condition </label>
             </div>
-            <a href="{{ route('attempt.create') }}" type="submit"
-                class="btn btn-primary float-right">Let's Start</a>
+            {{-- <a href="{{ route('attempt.create') }}" type="submit"
+                class="btn btn-primary float-right">Let's Start</a> --}}
+                <button class="btn btn-primary float-right" type="submit">Let's Start</button>
         </form>
         <br>
         <br>
