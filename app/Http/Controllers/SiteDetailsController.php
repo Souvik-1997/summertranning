@@ -15,8 +15,8 @@ class SiteDetailsController extends Controller
     {
         return view('online');
     }
-    public function contact()
-    {
-        return view('contact');
-    }
+    // public function contact()
+    // {
+    //     return view('contact');
+    // }
 }

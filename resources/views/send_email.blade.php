@@ -18,8 +18,8 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="/css/style.css">
-    
- 
+
+
     <style>
         .page-breadcrumb {
             padding: 250px 0 150px;
@@ -53,6 +53,7 @@
             font-family: 'Arbutus Slab', serif;
             padding: 0px;
         }
+
     </style>
 
 
@@ -103,12 +104,65 @@
             </div>
         </div>
     </div>
+    <br>
+    
     <!-- End All Pages -->
-    {{-- map --}}
-    <div class="map-full"></div>
 
-    {{-- map end --}}
-    <div class="footer-copyright text-center py-3 bg-black " style="color: #fff;">All Rights Reserved. &copy; 2020 <a href="{{action('SiteDetailsController@online')}}" style="color: #fff;">Online Exam System</a>
+    <div class="card shadow bg-white rounded">
+        <div class="card-body">
+            <div class="card shadow bg-white rounded">
+                <div class="card-body">
+                    <div class="row justify-content-center">
+                        <h2 style="color: rgb(224, 110, 75)">Contact us</h2>
+                    </div>
+                </div>
+            </div>
+            @if (count($errors)>0)
+            <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+            <ul class="alert alert-success">
+                @foreach ($errors->all() as $error)
+                    <div>{{ $error }}</div>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+        @if (($message = Session::get('success')))
+        <div class="alert alert-block">
+            <button type="button" class="close" data-dismiss="alert">x</button>
+        <strong>{{$message}}</strong>
+        </div>
+        @endif
+        <form method="POST" action="{{ url('sendemail/send') }}">
+            @csrf
+    
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Name</label>
+                <input type="text" class="form-control" name="name" placeholder="enter  name here">
+            </div>
+    
+            <div class="form-group">
+                <label for="exampleInputEmail2">Email address</label>
+                <input type="email" class="form-control" name="email" aria-describedby="emailHelp"
+                    placeholder="enter email here">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+    
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Enter your Query</label>
+                <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+    
+            <button type="submit" class="btn btn-primary" name="send" value="Send">Send</button>
+    
+        </form>
+        </div>
+    </div>
+   <br>
+
+
+    <div class="footer-copyright text-center py-3 bg-black " style="color: #fff;">All Rights Reserved. &copy; 2020 <a
+            href="{{ action('SiteDetailsController@online') }}" style="color: #fff;">Online Exam System</a>
     </div>
 
 

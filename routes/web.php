@@ -39,5 +39,7 @@ Route::resource('attempt','AttemptsExamController');
 Route::get('attempt/show_result/{id}', 'AttemptsExamController@show_result');
 Route::get('/about', 'SiteDetailsController@about');
 Route::get('/online', 'SiteDetailsController@online');
-Route::get('/contact', 'SiteDetailsController@contact');
+
+Route::get('/sendemail','SendEmailController@index');
+Route::post('/sendemail/send','SendEmailController@send');
 
