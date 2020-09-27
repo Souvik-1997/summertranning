@@ -194,7 +194,7 @@
 
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item  nulli active" id="na">
+                    <li class="nav-item  nulli " id="na">
                         <a href="{{action('SiteDetailsController@online')}}" class="nullia" id="na" style="color: antiquewhite;"> Home </a>
                     </li>
                     <li class="nav-item nulli activee">
@@ -202,7 +202,7 @@
                             style="color: antiquewhite;"> About </a>
                     </li>
                     <li class="nav-item nulli ">
-                        <a class="nullia" style="color: antiquewhite;"> Contact us </a>
+                        <a href="{{action('SendEmailController@index')}}" class="nullia" style="color: antiquewhite;"> Contact us </a>
                     </li>
                 </ul>
             </div>

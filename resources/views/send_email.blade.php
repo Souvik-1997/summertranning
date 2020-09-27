@@ -77,14 +77,14 @@
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item  nulli active" id="na">
-                        <a class="nullia" id="na" style="color: antiquewhite;"> Home </a>
+                        <a href="{{action('SiteDetailsController@online')}}" class="nullia" id="na" style="color: antiquewhite;"> Home </a>
                     </li>
                     <li class="nav-item nulli ">
                         <a href="{{ action('SiteDetailsController@about') }}" class="nullia"
                             style="color: antiquewhite;"> About </a>
                     </li>
-                    <li class="nav-item nulli ">
-                        <a class="nullia" style="color: antiquewhite;"> Contact us </a>
+                    <li class="nav-item nulli activee">
+                        <a href="{{action('SendEmailController@send')}}" class="nullia" style="color: antiquewhite;"> Contact us </a>
                     </li>
                 </ul>
             </div>
@@ -120,7 +120,7 @@
             @if (count($errors)>0)
             <div class="alert alert-danger">
                 <button type="button" class="close" data-dismiss="alert">x</button>
-            <ul class="alert alert-success">
+            <ul>
                 @foreach ($errors->all() as $error)
                     <div>{{ $error }}</div>
                 @endforeach

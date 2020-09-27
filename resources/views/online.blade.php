@@ -43,7 +43,7 @@
                     <a href="{{action('SiteDetailsController@about')}}" class="nullia" style="color: antiquewhite;"> About </a>
                     </li>
                     <li class="nav-item nulli ">
-                        <a class="nullia" style="color: antiquewhite;"> Contact us </a>
+                        <a href="{{action('SendEmailController@index')}}" class="nullia" style="color: antiquewhite;"> Contact us </a>
                     </li>
                 </ul>
             </div>
