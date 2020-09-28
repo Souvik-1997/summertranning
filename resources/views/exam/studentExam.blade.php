@@ -54,6 +54,7 @@
                 <form class="form-inline my-2 my-lg-0">
                     <i class="fas fa-user-circle" style="font-size:35px;color:rgb(252, 252, 252);"></i>&nbsp;
                     <h4 style="color: aliceblue;font-size:18px;padding-top:10px;"> {{ Session::get('name') }}</h5>
+                        <a href="{{ action('AdminController@create') }}" class="btn  btn-outline-light d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3">Log out</a>
                         &nbsp;&nbsp;
                 </form>
             </div>

@@ -28,11 +28,11 @@ html,body {
 }
 .nullia:hover {
     text-decoration: none;
-    padding: 5px 30px;
+    padding: 6px 30px;
     border: 1px;
     background-color: #964050;
     border-top: 10px;
-    transition: 0.3s ease;
+    transition: 0.2s ease;
     box-shadow: -10px 10px 15px rgb(0, 0, 0);
     border-radius: 4px;
     text-emphasis-color: black;
@@ -41,6 +41,7 @@ html,body {
 {
     background-color: #964050;
     border-radius: 4px;
+    box-shadow: -10px 10px 15px rgb(0, 0, 0);
     padding: 5px 1px ;
     margin-top: 5px;
     
@@ -209,7 +210,7 @@ html,body {
 {
     width: 80%;
     margin-left: 25px;
-    margin-top: 30px;
+    margin-top: 5px;
 	min-height: 220px;
    padding: 2.5%;
    float: center;

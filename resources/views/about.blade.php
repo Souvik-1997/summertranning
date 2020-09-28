@@ -61,7 +61,8 @@
 
         .our-team {
             border: 2px solid #3d3434;
-            border-radius: 0px;
+            border-radius: 4px;
+        
             text-align: center;
             margin: 10px;
             z-index: 1;
@@ -278,8 +279,9 @@
     <!-- End Stuff -->
 
         <!-- Copyright -->
-<div class="footer-copyright text-center py-3 bg-black " style="color: #fff;">All Rights Reserved. &copy; 2020 <a href="{{action('SiteDetailsController@online')}}" style="color: #fff;">Online Exam System</a>
-        </div>
+        <div class="footer-copyright text-center py-3 bg-black " style="color: #fff;">All Rights Reserved. &copy; 2020 <a
+            href="{{ action('SiteDetailsController@online') }}" style="color: #fff;">Online Exam System</a>
+    </div>
         <!-- Copyright -->
 
     <!-- Start Footer -->

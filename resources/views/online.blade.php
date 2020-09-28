@@ -69,7 +69,7 @@
                     <h1>”Education is the most powerful weapon which you can use to change the world”</h1>
                     <p>– Nelson Mandela</p>
                     <div class="button">
-                        <a href="#" class="btn">LEARN</a>
+                        <a href="https://www.souviksolution.wordpress.com" class="btn">LEARN</a>
                     </div>
                 </div>
             </div>
@@ -79,7 +79,7 @@
                     <h1> “An investment in knowledge pays the best interest” </h1>
                     <p>– Benjamin Franklin</p>
                     <div class="button">
-                        <a href="#" class="btn">LEARN</a>
+                        <a href="https://www.souviksolution.wordpress.com" class="btn">LEARN</a>
                     </div>
                 </div>
 
@@ -90,7 +90,7 @@
                     <h1>“Live as if you were to die tomorrow. Learn as if you were to live forever” </h1>
                     <p>– Mahatma Gandhi</p>
                     <div class="button">
-                        <a href="#" class="btn">LEARN</a>
+                        <a href="https://www.souviksolution.wordpress.com" class="btn">LEARN</a>
                     </div>
                 </div>
 
@@ -257,6 +257,9 @@
 
                 <div class="col-md-3 mb-md-0 mb-3">
                     <h5 class="text underline" style="color: #fff;">Social Links</h5>
+                    <div class="row" style>
+                    <p style="color: #fff;margin-left:30px;">You can<a href="{{action('SendEmailController@index')}}"> Mail </a>us through valid mail</p>   
+                       </div>
 
                     <ul class="list-unstyled">
                         <li>
@@ -267,11 +270,16 @@
                                     <a href=""><img src="./images/w.png"></a>
                                     <a href=""><img src="./images/t.png"></a>
                                     <a href=""><img src="./images/y1.jpg"></a>
+
                                 </div>
+
                             </div>
+                           
                         </li>
+                       
 
                     </ul>
+                    
 
                 </div>
         
@@ -281,6 +289,7 @@
 
         </div>
 
+        <br>
         <br>
         
         <!-- Copyright -->

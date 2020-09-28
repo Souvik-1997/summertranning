@@ -22,6 +22,7 @@ class SendEmailController extends Controller
         ]);
         $data = array(
             'name' => $request->name,
+            'email' => $request->email,
             'message' => $request->message
         );
         Mail::to('tchatterjee466@gmail.com')->send(new SendMail($data));

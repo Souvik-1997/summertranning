@@ -100,6 +100,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Contact us.</h1>
+                    <p style="color: rgb(212, 201, 201);">You contact us through valid mail</p>
                 </div>
             </div>
         </div>
