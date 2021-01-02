@@ -130,7 +130,7 @@
                                     </tr>
                                     <tr>
                                         <th scope="row">Total marks:</th>
-                                        <td>{{ $result_info->yes_ans }}</td>
+                                        <td>{{ $result_info->yes_ans }}/{{ $result_info->yes_ans + $result_info->no_ans}}</td>
                                     </tr>
                                 </tbody>
                             </table>

@@ -279,9 +279,8 @@
     <!-- End Stuff -->
 
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3 bg-black " style="color: #fff;">All Rights Reserved. &copy; 2020 <a
-            href="{{ action('SiteDetailsController@online') }}" style="color: #fff;">Online Exam System</a>
-    </div>
+        <div class="footer-copyright text-center py-4 bg-black " style="color: #fff;">All Rights Reserved. &copy; 2020 <a href="" style="color: #fff;">Online Exam System</a>
+        </div>
         <!-- Copyright -->
 
     <!-- Start Footer -->

@@ -84,7 +84,7 @@
                             style="color: antiquewhite;"> About </a>
                     </li>
                     <li class="nav-item nulli activee">
-                        <a href="{{action('SendEmailController@send')}}" class="nullia" style="color: antiquewhite;"> Contact us </a>
+                        <a href="{{action('SendEmailController@index')}}" class="nullia" style="color: antiquewhite;"> Contact us </a>
                     </li>
                 </ul>
             </div>
@@ -118,6 +118,7 @@
                     </div>
                 </div>
             </div>
+            <hr >
             @if (count($errors)>0)
             <div class="alert alert-danger">
                 <button type="button" class="close" data-dismiss="alert">x</button>
