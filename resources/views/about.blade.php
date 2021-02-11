@@ -233,9 +233,6 @@
                 <div class="col-lg-12">
                     <div class="heading-title text-center">
                         <h2>Developer</h2>
-                        {{-- <p>“If more of us valued food and cheer and song above
-                            hoarded gold, it would be a merrier
-                            world.”</p> --}}
                     </div>
                 </div>
             </div>
