@@ -11,6 +11,10 @@ class SiteDetailsController extends Controller
     {
         return view('about');
     }
+    // public function about1()
+    // {
+    //     return view('about1');
+    // }
     public function online()
     {
         return view('online');

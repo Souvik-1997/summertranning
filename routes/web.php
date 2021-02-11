@@ -38,6 +38,7 @@ Route::resource('attempt','AttemptsExamController');
 // Route::get('/attempt', 'ExamAttemptController@attempt');
 Route::get('attempt/show_result/{id}', 'AttemptsExamController@show_result');
 Route::get('/about', 'SiteDetailsController@about');
+// Route::get('/about1', 'SiteDetailsController@about1');
 Route::get('/online', 'SiteDetailsController@online');
 
 Route::get('/sendemail','SendEmailController@index');

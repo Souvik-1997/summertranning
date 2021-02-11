@@ -232,7 +232,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="heading-title text-center">
-                        <h2>Team Membars</h2>
+                        <h2>Developer</h2>
                         {{-- <p>“If more of us valued food and cheer and song above
                             hoarded gold, it would be a merrier
                             world.”</p> --}}
@@ -246,32 +246,10 @@
                         <img src="../images/to.jpg">
                         <div class="team-content">
                             <h3 class="title">Souvik Chatterjee</h3>
-                            <span class="post">Team Alpha</span>
+                            <span class="post">Alpha</span>
                         </div>
                     </div>
                 </div>
-
-                <div class=" col-sm-3 justify-content-center">
-                    <div class="our-team">
-                        <img src="../images/s.jpeg">
-                        <div class="team-content">
-                            <h3 class="title">Sofiar Rahaman Middya</h3>
-                            <span class="post">Team Alpha</span>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class=" col-sm-3  ">
-                    <div class="our-team">
-                        <img src="../images/m.jpg">
-                        <div class="team-content">
-                            <h3 class="title">Monalisa Bose</h3>
-                            <span class="post">Team Alpha</span>
-                        </div>
-                    </div>
-                </div>
-
 
             </div>
         </div>

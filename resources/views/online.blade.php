@@ -45,6 +45,10 @@
                     <li class="nav-item nulli ">
                         <a href="{{action('SendEmailController@index')}}" class="nullia" style="color: antiquewhite;"> Contact us </a>
                     </li>
+                    {{-- <li class="nav-item nulli ">
+                        <a href="{{action('SiteDetailsController@about1')}}" class="nullia" style="color: antiquewhite;"> Job </a>
+                        </li> --}}
+
                 </ul>
             </div>
 
